@@ -1,0 +1,156 @@
+
+<!--  EnableViewStateMac="false"  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>잡코리아 - JOBKOREA</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" name="viewport"/>
+<style type="text/css">
+		/* common */
+		html, body, div, p, h1, img, ul, li, span, strong, a {margin:0; padding:0; line-height:0;font-family: 'Apple SD Gothic Neo', Arial, sans-serif; letter-spacing: -0.5px;}
+		img {vertical-align:top; border:0;}
+		ul, li {list-style:none;}
+		a {text-decoration:none;}
+		hr {display:none;}
+
+		.skip {position:absolute; left:-9999px; top:-9999px; height:1px; width:1px;}
+
+		/* user */
+		.logoArea,.contents,.copy {width:100%; margin:0 auto;}
+		.contents {width: 100%; max-width: 430px; padding: 20px 20px 0; box-sizing: border-box;}
+		.logoArea {height:50px; text-align:center;}
+
+		.reasonExp {margin-top:10px; font-size:20px; color:#333; line-height:35px; text-align:center;}
+		.reasonExp span {display:block; line-height:24px; font-weight:bold;}
+		.reasonList {padding:20px;  margin:15px auto 0; background:#f4f4f4;}
+		.reasonList li {padding-left:10px; font-size:14px; line-height:18px; color:#494949; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD9JREFUeNpi9PT0lGNgYJgDxJZAfByIU1iAxFwgdmGAAFcgXsgEJCwYUIEVSPAEmuAxkGAyEO8B4q9QOgEgwAD/Sgn8ZtAYZQAAAABJRU5ErkJggg==) no-repeat 0 11px; background-size:2px 2px; line-height: 25px;}
+
+		.ipExp,.ipExp_2 {margin-top:25px; font-size:15px; color:#333; line-height:27px; text-align:center;}
+		.ipExp strong,.ipExp_2 strong {color:#002AFF; font-weight: normal;}
+		.ipExp_2 {margin-top:0;}
+
+		.bgGray {height:65px; margin:25px 0; padding:0 11px; background:#f4f4f4;}
+		.bgGray .infoExp {font-size:14px; line-height:25px; color:#666;}
+		.bgGray .infoArea {}
+		.bgGray .infoArea span {font-size:13px; line-height:25px; color:#666;}
+		.bgGray .infoArea a {color:#75787c;}
+		.bgGray .infoArea .bold {padding-left:10px; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD9JREFUeNpi9PT0lGNgYJgDxJZAfByIU1iAxFwgdmGAAFcgXsgEJCwYUIEVSPAEmuAxkGAyEO8B4q9QOgEgwAD/Sgn8ZtAYZQAAAABJRU5ErkJggg==) no-repeat 0 8px; background-size:2px 2px;}
+
+		.bgGray.bgGray_2 {height:auto; padding: 20px;}
+		.bgGray.bgGray_2 .infoArea {padding-top:20px;}
+        .bgGray .infoArea_2 {padding-top: 0 !important;} 
+
+
+		.copy {position: absolute; left: 0; bottom: 80px; width: 100%; font-size: 12px; color: #999; text-align: center;}
+		@media (max-height: 735px) {
+		.copy {position: static; margin: 35px 0 20px;}
+		}
+
+
+		.ipNext {display:block; max-width: 300px; width:calc(100% - 192px); height:50px; margin:25px auto 0; background:#ff6633; font-weight:bold; color:#fff; line-height:50px; border:1px solid #e55c2e; border-radius:2px; text-align:center;} 
+		input.ipNext {display:block; height:50px; padding-top:0; cursor:pointer; font-size:16px; -webkit-appearance:none;}
+		#btnInput.ipNext {width: calc(100% - 150px); margin: 25px 75px 40px;}
+
+		.capcharArea {width:290px; margin:30px auto 0;}
+		.capcharArea .capchar {border:1px solid #cdcdcd;}
+		.capcharArea .capchar img {width:288px; height:47px;}
+		.capcharArea .capcharTxt {margin-top:6px;}
+		.capcharArea .capcharTxt input {width:268px; height:16px; padding:6px 10px; font-size:14px; line-height:16px; color:#666; border:1px solid #cdcdcd;}
+
+        .albamon .ipNext {background:#ff6633; border:1px solid #e55c2e;}
+        .jobkorea .ipNext {background:#002AFF; border:1px solid #2492ff;}
+		.gamejob .ipNext {background:#00bce3; border:1px solid #0fcde3;}
+
+        /* jobkorea */ 
+        .jobkorea .logoArea {background: #002AFF;} 
+		.jobkorea .logo {padding-top: 17.5px;}
+		.jobkorea .logo img {width:100px;} 
+	</style>
+</head>
+<body onload="onLoad();">
+<!-- class replace : albamon || jobkorea -->
+<div class="wrapper jobkorea">
+<div class="logoBdr">
+<div class="logoArea">
+<h1 class="logo"><a href="http://www.jobkorea.co.kr"><img alt="jobkorea" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAeCAYAAABpP1GsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMjQxMzAxMjVFRjExRUE5QkJBRDREQjY4N0E3Qjg3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMjQxMzAyMjVFRjExRUE5QkJBRDREQjY4N0E3Qjg3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyNDEyRkYyNUVGMTFFQTlCQkFENERCNjg3QTdCODciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyNDEzMDAyNUVGMTFFQTlCQkFENERCNjg3QTdCODciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4TiyG5AAAKLElEQVR42uxc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"/></a></h1>
+</div>
+</div>
+<hr/>
+<div class="contents">
+<p class="reasonExp" id="step1_1"> 보안정책에 의하여 잡코리아<br/><span>이용이 일시적으로 중지되었습니다.</span></p>
+<p class="reasonExp" id="step2_1" style="display:none">서비스를 계속 이용하시려면<span>보안문자를 입력해 주시기 바랍니다.</span></p>
+<ul class="reasonList" id="step1_3">
+<li>짧은 시간 동안 과도한 접속 시도</li>
+<li>프로그램을 통한 사이트 접근 시도</li>
+<li>약관 및 서비스 정책에 위배되는 이용이 의심되는 경우</li>
+</ul>
+<form action="./jkConfirm.aspx?r=16&amp;a=%2fRecruit&amp;ret=%2fRecruit%2fGI_Read%2f44635742%3fPageGbn%3dMST" id="form1" method="post">
+<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="AHfMiwaYJM4SKknJaV76z9MQnvQkUym0xEEwPlRWN3JUZLCHuaYnUC2Bmd9Uh4zr1T62iIJlKnVyITITEOckoHk8ul85LcMssnuSJLmpL9c="/>
+<input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="6BA73C79"/>
+<input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="WjbmD74b6hmcRJBL+4ZOUYa0D+M0Ex5ksaSMxwsxHlNyKA8wBEMXMbvbCb9j7qy5Gk5SqhAjL83IIi0LeZh6KJmOdvJy79gdh9+h2xruqa05q1Y8W5CZSj2C4YcUdbJXMwhDB9duAKRp8fX1kaACkQ=="/>
+<div class="capcharArea" id="capcharArea" style="display:none">
+<div class="capchar">
+<img id="imgCaptcha"/>
+</div>
+<div class="capcharTxt">
+<label class="skip" for="inp01">캡차보안문자입력</label>
+<input class="cInp" id="txtInputText" name="txtInputText" placeholder="6자 영문 - 대소문자 구분 없음" type="text"/>
+</div>
+</div>
+<p class="ipExp" id="step1_6">사용하고 계신 IP는 <strong>155.230.84.142</strong> 입니다.</p>
+<input class="ipNext" id="btnInput" name="btnInput" style="display:none" type="submit" value="확인"/>
+<div class="bgGray bgGray_2" id="step2_2" style="display:none">
+<p class="infoExp">보안문자가 보이지 않을 경우 잠시만 기다려 주시기 바랍니다. 계속 문제가 발생할 경우 고객센터로 문의해 주세요.</p>
+<div class="infoArea infoArea_2">
+<span class="bold">TEL : </span><span>1588-9350</span><br/><span class="bold">e-메일 : </span><span><a href="mailto:helpdesk@jobkorea.co.kr">helpdesk@jobkorea.co.kr</a></span><br/><span class="bold">전화상담시간 : </span><span>[월-금] 09:00~19:00 [토] 09:00~15:00</span>
+</div>
+</div>
+</form>
+<p class="ipExp_2" id="step1_4">보안문자 입력 후 다시 이용 가능합니다.</p>
+</div>
+<hr/>
+<a class="ipNext" href="#" id="step1_5" onclick="javascript:showCaptchaImage(true);">계속 진행하기</a>
+<p class="copy">© JOBKOREA</p>
+</div>
+</body>
+<script type="text/javascript">
+    
+
+    //추가된 부분 개발1팀 이상묵 
+    
+
+   
+    function showCaptchaImage(showCaptchar)
+    {
+        var step1Style = 'block';
+        var step2Style = 'none';
+        if (showCaptchar)
+        {
+            step1Style = 'none';
+            step2Style = 'block';
+            document.getElementById('imgCaptcha').src = "https://m.jobkorea.co.kr:443/Recruit/jkWebModule/jkCaptcha.aspx?gif=1";
+        }
+        document.getElementById('step1_1').style.display = step1Style;
+        document.getElementById('step1_3').style.display = step1Style;
+        document.getElementById('step1_4').style.display = step1Style;
+        document.getElementById('step1_5').style.display = step1Style;
+        document.getElementById('step1_6').style.display = step1Style;
+
+        document.getElementById('step2_1').style.display = step2Style;
+        document.getElementById('step2_2').style.display = step2Style;
+        document.getElementById('capcharArea').style.display = step2Style;
+        document.getElementById('btnInput').style.display = step2Style;
+    }
+    function onLoad() {
+        if (document.getElementById('txtInputText').value == "") {
+            showCaptchaImage(false);
+        }        
+        else {            
+            showCaptchaImage(true);
+            alert("잘못된 정보를 입력 하셨습니다.");
+        }
+    }
+</script>
+</html>
