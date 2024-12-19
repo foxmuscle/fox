@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-aligned Header</title>
+    <style>
+        /* Reset styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout styles */
+        body {
+            display: flex;
+        }
+
+        header {
+            width: 200px; /* 헤더의 너비 */
+            height: 100vh; /* 전체 화면 높이 */
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .image-container {
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 100px; /* 로고 크기 */
+            margin-bottom: 20px;
+        }
+
+        header a {
+            text-decoration: none;
+            margin: 10px 0;
+            display: block;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 150px;
+            margin: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="image-container">
+            <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\예스메이트!.png" alt="Example JPG">
+        </div>
+
+        <!-- 홈 버튼 -->
+        <a href="/">
+            <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\홈버튼.png" alt="Home Button">
+        </a>
+
+        <!-- 추가 링크 섹션 -->
+        <a href="https://example.com/admin" target="_blank">Admin</a>
+        <a href="https://example.com/worker" target="_blank">Worker</a>
+    </header>
+
+    <div class="content">
+        <main>
+            <div class="card">
+                <a href="https://example.com/admin" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\작업자모자.jpg" alt="Business Icon">
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://example.com/worker" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\관리자책.jpg" alt="Engineer Icon">
+                </a>
+            </div>
+        </main>
+        <footer>
+            <p>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\twitter X.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\instagram.png" alt="Instagram">
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\youtube.png" alt="YouTube">
+                </a>
+                <a href="https://accounts.kakao.com/" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\kakao.png" alt="KakaoTalk">
+                </a>
+                <a href="https://blog.naver.com/computermate" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\naver blog.png" alt="Blog">
+                </a>
+            </p>
+            <div>
+                © 2024 yes!mate(yi-hyun, ji-won, jae-ung, dong-gun) 
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

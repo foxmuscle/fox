@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Template</title>
+    <style>
+
+
+
+
+            /* 기본 스타일 - 위에 버튼  */
+        .menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                gap: 20px;
+            }
+
+        .menu-item {
+                position: relative; /* 드롭다운 메뉴를 위한 상대 위치 설정 */
+            }
+
+        .menu-item > a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                padding: 10px 20px;
+                display: block;
+            }
+
+
+        .submenu {
+            list-style: none;
+            position: absolute;
+            top: 100%; /* 부모 메뉴 바로 아래에 배치 */
+            left: 10; /* 왼쪽 정렬 */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px 0;
+            margin: 0;
+            display: none; /* 기본적으로 숨김 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .submenu li {
+                padding: 5px 20px;
+            }
+
+        .submenu li a {
+                text-decoration: none;
+                color: #333;
+            }
+
+        .submenu li a:hover {
+            color: #333; /* 호버 시 텍스트 색상 */
+            background-color: #fff; /* 호버 시 배경색 */
+            }
+
+            /* 메뉴 호버 시 서브메뉴 표시 */
+        .menu-item:hover .submenu {
+                display: block;
+            }
+
+
+            /* 상단 글자 스타일 */
+
+        .intro-text {
+                text-align: center;
+                padding: 20px;
+                background-color: #f9f9f9; /* 배경색 */
+                border-bottom: 1px solid #ddd; /* 아래 경계선 */
+                margin: 0; /* 상하 여백 제거 */
+            }
+
+        .intro-text h1 {
+                font-size: 24px;
+                color: #333;
+                margin: 10px 0;
+            }
+
+        .intro-text p {
+                font-size: 16px;
+                color: #555;
+                margin: 0;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* 기본 스타일 */
+             /* body 내 img 스타일 */
+        .image-container img {
+            display: block; /* 왼쪽 정렬 */
+            margin-left: 180px; /* 오른쪽으로 약간 이동 */
+            margin-top: 20px; /* 위쪽 여백 */
+            max-width: 100%; /* 크기 제한 */
+            height: auto; /* 비율 유지 */
+        }
+
+            /* main 안의 이미지 스타일 */
+        main .card img {
+            max-width: 100%;
+            border-radius: 10px;
+            width: 300px; /* main 안 이미지 크기 */
+            height: auto; /* 비율 유지 */
+            margin: 0; /* 추가 이동 방지 */
+
+        }
+        /* header  뒷배경 꾸미기 */ 
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(255, 165, 0, 0.5); /* 주황색 섀도우 추가 */
+        }
+        /*header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #fff, #ffe0b2); /* 흰색에서 주황색으로 그라데이션 */
+           /* border-bottom: 1px solid #ddd;
+        } */
+
+
+        /* yes mate  이미지 */ 
+
+         header img {
+            max-height: 50px;
+            margin-right: 50px; /* 이미지 오른쪽으로 이동 */
+
+        }
+
+        /* 위에 버튼  꾸미기 */
+        nav {
+            flex: 1; /* 텍스트가 더 넓은 공간을 차지하도록 설정 */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* <li> 사이간격 */
+            margin: 0;
+            padding: 0;
+            justify-content: flex-end; /* 메뉴를 오른쪽으로 정렬 유지*/
+            transform: translateX(-200px); /* 약간 왼쪽으로 이동 */
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px; /* <li> 사이 간격 */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+
+
+
+
+
+        /* 이거 옆에 3줄 꾸미기  햄버거*/
+
+        /* 이미지 컨테이너 */
+        .image-container img {
+            max-height: 50px;
+        }
+
+        /* 햄버거 메뉴 스타일 */
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute; /* 위치를 절대값으로 조정 */
+            right: 200px; /* 오른쪽에서 약간 왼쪽으로 이동 */
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+        }
+
+
+        /* 네비게이션 메뉴 */
+        nav.menu {
+            display: none; /* 기본적으로 숨김 */
+            position: absolute;
+            top: 60px; /* 헤더 아래 */
+            right: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1000;
+        }
+
+        nav.menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav.menu ul li {
+            margin: 10px 0;
+        }
+
+        nav.menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /*옆에 3줄 꾸미기 끝 ㅋㅋㅋ */
+
+
+
+
+        /* 맨 밑ㅇㅔ 글자 */
+        footer {
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            padding: 20px 40px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        footer .footer-top {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-top p {
+            margin: 0;
+        }
+
+        footer .footer-top a {
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        footer .footer-top img {
+            width: 25px; /* 아이콘 너비 */
+            height: 25px; /* 아이콘 높이 */
+            vertical-align: middle;
+            margin: 0 5px; /* 아이콘 간 간격 */
+        }
+
+        footer .footer-bottom {
+            text-align: center; /* 텍스트를 가운데 정렬 */
+            display: block; /* Flexbox 대신 블록으로 변경 */
+            margin-top: 10px; /* 상단 여백 */
+        }
+
+        footer .footer-bottom .footer-left,
+        footer .footer-bottom .footer-right {
+            display: inline-block; /* 한 줄에 배치 */
+            margin: 0 10px; /* 좌우 간격 */
+        }
+
+        footer .footer-bottom a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        footer .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <div class="image-container">
+            <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\예스메이트!.png" alt="Example JPG">
+        </div>
+
+  
+  
+        <nav>
+            <ul>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#examples">User Example</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    
+    
+    <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </header>
+    
+
+    <!-- 텍스트 섹션 추가 -->
+    <section class="intro-text">
+        <h1> 관리자  </h1>
+ 
+    </section>
+
+
+
+
+
+
+
+
+
+    <main>
+        <div>
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            여기 넣으세요 !!!
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <p>Follow us on: 
+                <a href="https://facebook.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\facebook.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\twitter X.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\instagram.png" alt="Instagram">
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\youtube.png" alt="YouTube">
+                </a>
+                <a href="https://accounts.kakao.com/" target="_blank">
+                    <img src="C:\Users\LG\Desktop\myproject\my_flask\app\static\images\kakao.png" alt="KakaoTalk">
+                </a>
+                <a href="https://blog.naver.com/" target="_blank">
+                    <img src="/C:\Users\LG\Desktop\myproject\my_flask\app\static\images\naver blog.png" alt="Blog">
+                </a>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-left">
+                © 2024 yes!mate(yi-hyun, ji-won, jae-wung, dong-gun) 
+            </div>
+            <div class="footer-right">
+                <a href="#terms">Terms Of Use</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
